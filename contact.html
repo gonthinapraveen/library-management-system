@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Library Management System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body class="bg-light">
+    <!-- Top Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-book-half"></i> Library Pro
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-5 mt-5">
+        <div class="row g-5">
+            <!-- Contact Info -->
+            <div class="col-lg-4">
+                <div class="card shadow h-100">
+                    <div class="card-header bg-primary text-white text-center">
+                        <i class="bi bi-telephone display-6"></i>
+                        <h5>Get in Touch</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-4">
+                            <h6><i class="bi bi-geo-alt text-primary"></i> Address</h6>
+                            <p>Sir CR Reddy College Library<br>Vijayawada, AP 520007</p>
+                        </div>
+                        <div class="mb-4">
+                            <h6><i class="bi bi-telephone text-success"></i> Phone</h6>
+                            <p>+91 98765 43210</p>
+                        </div>
+                        <div class="mb-4">
+                            <h6><i class="bi bi-envelope text-warning"></i> Email</h6>
+                            <p>library@sircreddy.ac.in</p>
+                        </div>
+                        <div class="mb-4">
+                            <h6><i class="bi bi-clock text-info"></i> Hours</h6>
+                            <p>Mon-Sat: 9AM - 6PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="col-lg-8">
+                <div class="card shadow">
+                    <div class="card-header bg-success text-white text-center">
+                        <h4><i class="bi bi-chat-square-text"></i> Send Message</h4>
+                    </div>
+                    <div class="card-body">
+                        <form id="contactForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Full Name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control" placeholder="Email Address" required>
+                                </div>
+                                <div class="col-12">
+                                    <input type="text" class="form-control" placeholder="Student ID / Roll No.">
+                                </div>
+                                <div class="col-12">
+                                    <select class="form-select" required>
+                                        <option selected>Choose Department</option>
+                                        <option>CSE</option>
+                                        <option>IT</option>
+                                        <option>ECE</option>
+                                        <option>EEE</option>
+                                        <option>Mechanical</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <textarea class="form-control" rows="5" placeholder="Your Message (Book request, Issue complaint, etc.)" required></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="urgent" required>
+                                        <label class="form-check-label" for="urgent">
+                                            Mark as Urgent Request
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary btn-lg w-100">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p>&copy; 2026 Sir CR Reddy College Library Management System. Built with Bootstrap 5.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('✅ Message sent successfully! We will respond within 24 hours.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
